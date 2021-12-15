@@ -1,0 +1,8 @@
+path: /media/tohn/SSD/YOLOv5_data_FanDetect_custom
+train: images/train
+val: images/val
+test: images/test
+# number of classes
+nc: 1
+# class names
+names: ['Fan']
