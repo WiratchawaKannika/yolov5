@@ -46,10 +46,10 @@ def predict():
         
         # Create a blob client using the local file name as the name for the blob
         blob_client = blob_service_client.get_blob_client(container='fan', blob=input_value)
-        with open(input_value, "wb") as download_file:
+        with open(f"yolov5/imag_us_blob/{input_value}", "wb") as download_file:
             download_file.write(blob_client.download_blob().readall())
         #input_value = request.values["path_images"]
-        xmin, ymin, xmax, ymax, Confidence = predict_Fan(input_value)
+        xmin, ymin, xmax, ymax, Confidence = predict_Fan(f"yolov5/imag_us_blob/{input_value}")
         print(f"xmin : {xmin}")
         print(f"ymin : {ymin}")
         print(f"xmax : {xmax}")
