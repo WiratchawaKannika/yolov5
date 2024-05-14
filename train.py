@@ -67,7 +67,8 @@ def train(hyp,  # path/to/hyp.yaml or hyp dictionary
     # Directories
     w = save_dir / 'weights'  # weights dir
     (w.parent if evolve else w).mkdir(parents=True, exist_ok=True)  # make dir
-    last, best = w / 'last.pt', w / 'best.pt'
+    #last, best = w / 'last.pt', w / 'best.pt'
+    last, best = w / 'ModelYoloV5s_CropHipleft_last.pt', w / 'ModelYoloV5s_CropHipleft_best.pt'
 
     # Hyperparameters
     if isinstance(hyp, str):
